@@ -1,5 +1,8 @@
 #include <iostream>
 #include <vector>
+#include <fstream>
+#include <string>
+#include <utility>
 #include <unordered_map>
 
 #include "json.hpp"
@@ -9,7 +12,6 @@ struct Ingredient {
     std::string item_id {};
     int count {};
 };
-
 
 struct Item {
     std::string display_name  {}; // "displayname"
@@ -59,9 +61,22 @@ private:
 };
 
 
+void parse_neu_repo() {
+
+}
+
+
+
 int main() {
+
     ItemDB ItemDatabase {};
-    Item planks {"Wooden Planks", "wooden_planks", "", 1.0f, 1.0f};
+
+    Item planks         {"Wooden Planks",  "wooden_planks",  "", 1.0f, 1.0f};
+    Item stick          {"Stick",          "stick",          "", 1.0f, 1.0f};
+    Item wooden_pickaxe {"Wooden Pickaxe", "wooden_pickaxe", "", 1.0f, 1.0f};
+    
+     
     planks.print();
     ItemDatabase.add(std::move(planks));
+    return 0;
 }
