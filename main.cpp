@@ -2,11 +2,14 @@
 #include <vector>
 #include <fstream>
 #include <string>
+#include <filesystem>
 #include <unordered_map>
 #include <utility>
 
 #include "json.hpp"
 using json = nlohmann::json;
+
+namespace fs = std::filesystem;
 
 struct Ingredient {
     std::string item_id {};
@@ -60,9 +63,12 @@ private:
     std::unordered_map<std::string, Item> m_Items {};
 };
 
+
+static constexpr char neu_path[] = "./NotEnoughUpdates-REPO";
 void parse_neu(ItemDB& database) {
-    std::cout << "parsing...\n";
-    std::ifstream f{}
+    for (const auto& entry : fs::directory_iterator(neu_path)) {
+        std::cout << entry.path() << '\n';
+    }
 }
 
 int main(int argc, char* argv[]) {
