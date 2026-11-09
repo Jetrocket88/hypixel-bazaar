@@ -64,7 +64,7 @@ private:
 };
 
 
-static constexpr char neu_path[] = "./NotEnoughUpdates-REPO";
+static constexpr char neu_path[] = "./NotEnoughUpdates-REPO/items";
 void parse_neu(ItemDB& database) {
     for (const auto& entry : fs::directory_iterator(neu_path)) {
         std::cout << entry.path() << '\n';
