@@ -1,15 +1,9 @@
 #include <iostream>
 #include <vector>
-<<<<<<< Updated upstream
 #include <fstream>
 #include <string>
-#include <utility>
-=======
-#include <string>
-#include <utility>
-#include <fstream>
->>>>>>> Stashed changes
 #include <unordered_map>
+#include <utility>
 
 #include "json.hpp"
 using json = nlohmann::json;
@@ -69,31 +63,9 @@ private:
 void parse_neu(ItemDB& database) {
     std::cout << "parsing...\n";
     std::ifstream f{}
-
-<<<<<<< Updated upstream
-void parse_neu_repo() {
-
 }
-
-
-
-int main() {
-
-    ItemDB ItemDatabase {};
-
-    Item planks         {"Wooden Planks",  "wooden_planks",  "", 1.0f, 1.0f};
-    Item stick          {"Stick",          "stick",          "", 1.0f, 1.0f};
-    Item wooden_pickaxe {"Wooden Pickaxe", "wooden_pickaxe", "", 1.0f, 1.0f};
-    
-     
-    planks.print();
-    ItemDatabase.add(std::move(planks));
-    return 0;
-=======
-};
 
 int main(int argc, char* argv[]) {
     ItemDB ItemDatabase {};
     parse_neu(ItemDatabase);
->>>>>>> Stashed changes
 }
