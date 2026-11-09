@@ -1,8 +1,14 @@
 #include <iostream>
 #include <vector>
+<<<<<<< Updated upstream
 #include <fstream>
 #include <string>
 #include <utility>
+=======
+#include <string>
+#include <utility>
+#include <fstream>
+>>>>>>> Stashed changes
 #include <unordered_map>
 
 #include "json.hpp"
@@ -60,7 +66,11 @@ private:
     std::unordered_map<std::string, Item> m_Items {};
 };
 
+void parse_neu(ItemDB& database) {
+    std::cout << "parsing...\n";
+    std::ifstream f{}
 
+<<<<<<< Updated upstream
 void parse_neu_repo() {
 
 }
@@ -79,4 +89,11 @@ int main() {
     planks.print();
     ItemDatabase.add(std::move(planks));
     return 0;
+=======
+};
+
+int main(int argc, char* argv[]) {
+    ItemDB ItemDatabase {};
+    parse_neu(ItemDatabase);
+>>>>>>> Stashed changes
 }
